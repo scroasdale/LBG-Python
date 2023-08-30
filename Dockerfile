@@ -16,12 +16,12 @@ COPY . .
 
 # install dependencies
 
-RUN yarn install --production
+RUN pip install -r requirements.txt
 
 # execute the command
 
-CMD ["node", "src/index.js"]
+CMD python lbg.py --PORT 9000
 
 # define the port number the container should expose
 
-EXPOSE 3000
+EXPOSE 9000
