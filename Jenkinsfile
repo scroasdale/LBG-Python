@@ -24,5 +24,13 @@ registry = "scroasdale/lbg-python"
                     }
                 }
             }
+
+            stage ("Run the image"){
+                steps{
+                    script{
+                        dockerImage.run("-p 3000:8080")
+                    }
+                }
+            }
             }
         }
