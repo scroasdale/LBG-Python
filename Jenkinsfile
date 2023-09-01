@@ -14,13 +14,6 @@ registry = "scroasdale/lbg-python"
                 }
             }
 
-            stage ('Test the changes')
-                steps{
-                    script{
-                        echo "This is a test"
-                    }
-                }
-
             stage ("Push to Docker Hub"){
                 steps {
                     script {
