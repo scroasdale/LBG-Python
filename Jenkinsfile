@@ -35,7 +35,9 @@ registry = "scroasdale/lbg-python"
 
             stage ("Run the Unit Tests"){
                 steps{
-                        docker exec alpha python lbg.test.py
+                    script{
+                        sh docker exec alpha python lbg.test.py
+                    }
                 }
             }
             }
