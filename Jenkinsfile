@@ -1,6 +1,6 @@
 pipeline{
 environment {
-registry = "scroasdale/lbgPython"
+registry = "scroasdale/lbg-python"
         registryCredentials = "dockerhub_id"
         dockerImage = ""
     }
