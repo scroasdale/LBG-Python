@@ -28,7 +28,15 @@ registry = "scroasdale/lbg-python"
             stage ("Run the image"){
                 steps{
                     script{
-                        dockerImage.run("-p 3000:8080")
+                        dockerImage.run("-p 3000:8080 --name alpha")
+                    }
+                }
+            }
+
+            stage ("Run the Unit Tests"){
+                steps{
+                    script{
+                        docker exec alpha python lbg.test.py
                     }
                 }
             }
