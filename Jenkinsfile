@@ -17,7 +17,7 @@ registry = "scroasdale/lbg-python"
             stage ('Test the changes')
                 steps{
                     script{
-                        echo "This is a test"
+                        sh echo "This is a test"
                     }
                 }
 
